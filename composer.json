@@ -1,0 +1,15 @@
+{
+  "name": "dneustadt/majima-grid",
+  "version": "0.1.0",
+  "keywords": ["majima", "wysiwyg", "grid", "cms"],
+  "description": "Grid layouting and content editor for majima",
+  "homepage": "http://softcoder.de",
+  "license": "MIT",
+  "type": "majima-plugin",
+  "extra": {
+    "installer-name": "MajimaGrid"
+  },
+  "require": {
+    "dneustadt/majima-base-assets": "^0.1"
+  }
+}

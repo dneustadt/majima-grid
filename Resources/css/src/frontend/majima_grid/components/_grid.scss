@@ -1,0 +1,73 @@
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 32px; /* So we can drag into rows that are empty*/
+}
+
+.container {
+  &.grid {
+    .row {
+      margin: 0;
+      .col-panel {
+        @extend .col-xs;
+        margin: 5px;
+        padding: 0;
+        .col-panel--inner {
+          height: 100%!important;
+          width: 100%;
+          padding: 15px;
+          p:first-child {
+            margin-top: 0;
+          }
+          p:last-child {
+            margin-bottom: 0;
+          }
+          pre {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+  &.is--editable {
+    .row {
+      position: relative;
+      border: 1px dashed lightgrey;
+      .col-panel {
+        background: #eee;
+        position: relative;
+        .del-column {
+          position: absolute;
+          top: -5px;
+          left: -5px;
+        }
+        &.has--editor {
+          padding: 0;
+          z-index: 1001;
+          .trumbowyg-box {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    .add-column {
+      position: absolute;
+      bottom: -10px;
+      right: -5px;
+      z-index: 1;
+    }
+  }
+  .add-row {
+    margin: 10px 0;
+  }
+  *[data-column-edit="true"] {
+    min-height: 50px;
+  }
+}
+.save-grid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
