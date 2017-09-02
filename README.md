@@ -7,6 +7,8 @@ Demo-Plugin for majima framework.
 
 Grid layouting and content editor.
 
+### Installation
+
 Clone the git repository and the required assets to the directory 
 MajimaBaseAssets resp. MajimaGrid in majima's plugin directory:
 
